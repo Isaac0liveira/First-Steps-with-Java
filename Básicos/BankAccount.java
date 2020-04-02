@@ -1,6 +1,6 @@
 package testes;
 import java.util.Scanner;
-   class Sistema{
+   class BankAccount{
 	   
 	   public static void main(String[] args) {
 		   Menu inicio = new Menu();
@@ -14,14 +14,14 @@ import java.util.Scanner;
 		  if(menu) {
 			  System.out.println("Bem vindo!");
 			  System.out.println("1 - Selecionar conta\n2 - Sacar \n3 - Depositar");
-			  System.out.println("Digite a operaÁ„o a realizar: ");
+			  System.out.println("Digite a opera√ß√£o a realizar: ");
 			  Scanner digitar = new Scanner(System.in);
 			  if(digitar.hasNext("1")) {
 				 new Gerenciar().contaNova(true); 
 			  }
 			  else if(digitar.hasNext("2")) {
 				 if(destino == null) {
-					 System.out.println("N„o h· conta.");
+					 System.out.println("N√£o h√° conta.");
 				     new Menu().principal(true, null);
 				 }else {
 					 new Gerenciar().retirar(true, destino); 	 
@@ -29,13 +29,13 @@ import java.util.Scanner;
 			  }
 			  else if(digitar.hasNext("3")) {
 				  if(destino == null) {
-						 System.out.println("N„o h· conta.");
+						 System.out.println("N√£o h√° conta.");
 					     new Menu().principal(true, null);
 					 }else {
 						 new Gerenciar().depositar(true, destino); 	 
 					 }
 			  }else {
-				 System.out.println("OpÁ„o inv·lida");
+				 System.out.println("Op√ß√£o inv√°lida");
 				 new Menu().principal(true, destino);
 			  }
 				 
@@ -64,9 +64,9 @@ import java.util.Scanner;
 			double valor = valor1.nextDouble();	        
 			if(destino.saca(valor, destino)) {
 				System.out.println("Saque feito com sucesso!");
-				System.out.println("Seu saldo È: " + destino.valor);
+				System.out.println("Seu saldo √©: " + destino.valor);
 			}else {
-				System.out.println("N„o foi possÌvel fazer o saque!");
+				System.out.println("N√£o foi poss√≠vel fazer o saque!");
 			}
 			new Menu().principal(true, destino);
 		}
@@ -75,8 +75,8 @@ import java.util.Scanner;
 			Scanner valor1 = new Scanner(System.in);
 			double valor = valor1.nextDouble();
 			destino.deposita(valor);
-			System.out.println("DepÛsito feito com sucesso!");
-			System.out.println("Seu saldo È: " + destino.valor);
+			System.out.println("Dep√≥sito feito com sucesso!");
+			System.out.println("Seu saldo √©: " + destino.valor);
 			new Menu().principal(true, destino);
 		}
 		
