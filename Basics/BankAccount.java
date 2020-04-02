@@ -1,4 +1,5 @@
-package testes;import java.util.Scanner;
+package testes;
+import java.util.Scanner;
    class BankAccount{
 	   
 	   public static void main(String[] args) {
