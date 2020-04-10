@@ -1,6 +1,6 @@
 package testes;
 import java.util.Scanner;
-public class teste01{
+public class SignUpSignIn{
 	
 	public static void main(String[] args) {
 		new Menu().iniciar(true, null);
@@ -16,7 +16,7 @@ class Menu{
 		Scanner selecao = new Scanner(System.in);
 		if(selecao.hasNext("1")){
 			if(nova == null) {
-				System.out.println("Você não tem conta, crie uma!");
+				System.out.println("VocÃª nÃ£o tem conta, crie uma!");
 				new Menu().iniciar(true, null);
 			}else {
 				new Conta().Login(nova, true);
