@@ -1,6 +1,6 @@
 package testes;
 
-public class teste01{
+public class CarDriving{
 	
 	public static void main(String[] args) {
 		Carro Celta = new Carro();
@@ -9,7 +9,7 @@ public class teste01{
 		Celta.velocidadeMax = 200;
 		Celta.acelera(60);
 		
-		System.out.println("Pai tá de " + Celta.modelo + "\n" + Celta.cor);
+		System.out.println("Pai tÃ¡ de " + Celta.modelo + "\n" + Celta.cor);
 		System.out.println("Velocidade atual: " + Celta.velocidadeAtual + "\nMarcha: " + Celta.marcha());
 		
 		Celta.acelera(150);
@@ -22,7 +22,7 @@ class Carro{
 	void acelera(double quantidade) {
 		double nova_velocidadeAtual = this.velocidadeAtual + quantidade;
 		if(nova_velocidadeAtual > this.velocidadeMax) {
-			System.out.println("Você atingiu o limite de velocidade");
+			System.out.println("VocÃª atingiu o limite de velocidade");
 		}else {
 			this.velocidadeAtual = nova_velocidadeAtual; 
 		}
