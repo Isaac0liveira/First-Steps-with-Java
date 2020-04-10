@@ -1,6 +1,6 @@
 package testes;
 
-public class teste01{
+public class RecursiveFibonacci{
 	
 	public static void main(String [] args) {
 		Fibonacci  fibonacci = new Fibonacci();
