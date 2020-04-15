@@ -1,4 +1,3 @@
-package testes;
 import java.util.Scanner;
 public class homeComing{
 	
@@ -22,12 +21,12 @@ class Porta{
 	
 	void abrePorta(Porta entra) {
 		if(entra.aberta) {
-			System.out.println("A porta já está aberta!");
+			System.out.println("A porta jÃ¡ estÃ¡ aberta!");
 		}else if(entra.trancada) {
-			System.out.println("A porta está trancada!");
+			System.out.println("A porta estÃ¡ trancada!");
 		}else {
 			entra.aberta = true;
-			System.out.println("Você abriu a porta!");
+			System.out.println("VocÃª abriu a porta!");
 		}
 		new Casa().chegada(entra);
 	}
@@ -35,21 +34,21 @@ class Porta{
 	void fechaPorta(Porta entra) {
 		if(entra.aberta) {
 			entra.aberta = false;
-			System.out.println("Você fechou a porta!");
+			System.out.println("VocÃª fechou a porta!");
 		}else {
-			System.out.println("A porta já está fechada.");
+			System.out.println("A porta jÃ¡ estÃ¡ fechada.");
 		}
 		new Casa().chegada(entra);
 	}
 	
 	void trancaPorta(Porta entra) {
 		if(entra.trancada) {
-			System.out.println("A porta já está trancada!");
+			System.out.println("A porta jÃ¡ estÃ¡ trancada!");
 		}else if(entra.trancada == false && entra.aberta){
-			System.out.println("Você precisa fechar a porta para tranca-la!");
+			System.out.println("VocÃª precisa fechar a porta para tranca-la!");
 		}else {
 			entra.trancada = true;
-			System.out.println("Você trancou a porta!");
+			System.out.println("VocÃª trancou a porta!");
 		}
 		new Casa().chegada(entra);
 	}
@@ -57,20 +56,20 @@ class Porta{
 	void destrancaPorta(Porta entra) {
 		if(entra.trancada) {
 			entra.trancada = false;
-			System.out.println("Você destrancou a porta!");
+			System.out.println("VocÃª destrancou a porta!");
 		}else if(entra.aberta){
-			System.out.println("A porta está aberta, portanto, não está trancada!");
+			System.out.println("A porta estÃ¡ aberta, portanto, nÃ£o estÃ¡ trancada!");
 		}else {
-			System.out.println("A porta já está destrancada!");
+			System.out.println("A porta jÃ¡ estÃ¡ destrancada!");
 		}
 		new Casa().chegada(entra);
 	}
 	
 	void pintaPorta(Porta entra) {
-		System.out.println("A cor atual da porta é " + entra.cor + ". Deseja pinta-la de qual cor?");
+		System.out.println("A cor atual da porta Ã© " + entra.cor + ". Deseja pinta-la de qual cor?");
 		Scanner corNova = new Scanner(System.in);
 		entra.cor = corNova.next();
-		System.out.println("Sua porta agora é " + entra.cor + "!");
+		System.out.println("Sua porta agora Ã© " + entra.cor + "!");
 		new Casa().chegada(entra);
 	}
 }
@@ -78,10 +77,10 @@ class Porta{
 class Casa{
 	void chegada(Porta entra) {
 		if(entra == null) {
-			System.out.println("Você não tem uma porta, crie uma!");
+			System.out.println("VocÃª nÃ£o tem uma porta, crie uma!");
 			new Porta().criaPorta();
 		}else {
-			System.out.println("Você chegou em sua casa e avistou sua porta, o que fazer?");
+			System.out.println("VocÃª chegou em sua casa e avistou sua porta, o que fazer?");
 			System.out.println("1 - Abrir a porta \n2 - Fechar a porta \n3 - Trancar a porta \n4 - Destrancar a porta \n5 - Pintar a porta \n6 - Entrar em casa");
 			Scanner escolha = new Scanner(System.in);
 			if(escolha.hasNext("1")) {
@@ -97,7 +96,7 @@ class Casa{
 			}else if(escolha.hasNext("6")) {
 				new Casa().entrar(entra);
 			}else {
-				System.out.println("Opção inválida!");
+				System.out.println("OpÃ§Ã£o invÃ¡lida!");
 				new Casa().chegada(entra);
 			}
 		}	
@@ -105,9 +104,9 @@ class Casa{
 	
 	void entrar(Porta entra) {
 		if(entra.aberta) {
-			System.out.println("Você entrou! Bem vindo de volta ao seu lar!");
+			System.out.println("VocÃª entrou! Bem vindo de volta ao seu lar!");
 		}else {
-			System.out.println("Você não abriu a porta!");
+			System.out.println("VocÃª nÃ£o abriu a porta!");
 			new Casa().chegada(entra);
 		}
 	}
