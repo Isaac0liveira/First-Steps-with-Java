@@ -1,6 +1,6 @@
 package testes;
 import java.util.Scanner;
-   class BankAccount{
+   class bankAccount{
 	   
 	   public static void main(String[] args) {
 		   Menu inicio = new Menu();
