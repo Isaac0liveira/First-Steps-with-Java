@@ -1,4 +1,3 @@
-package testes;
 import java.util.Scanner;
 public class SignUpSignIn{
 	
