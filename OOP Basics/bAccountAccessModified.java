@@ -1,6 +1,12 @@
-package testes;
+* A modificação neste código é que, o anterior, bankAccount, pode ser alterado
+ * para que os valores de saldo sejam setados, tornando possível cometer erros.
+ * Já que o exercício pede algo mais estável, usei modificadores de acesso
+ * para impedir que o saldo esteja setado no início, mas que possa ser modificado
+ * apenas através de métodos como deposita e saca.
+ */
+
 import java.util.Scanner;
-   public class teste2{
+   public class bAccountAccessModified{
 	   
 	   public static void main(String[] args) {
 		   Menu inicio = new Menu();
