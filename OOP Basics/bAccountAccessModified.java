@@ -14,14 +14,14 @@ import java.util.Scanner;
 		  if(menu) {
 			  System.out.println("Bem vindo!");
 			  System.out.println("1 - Selecionar conta\n2 - Sacar \n3 - Depositar");
-			  System.out.println("Digite a operaÁ„o a realizar: ");
+			  System.out.println("Digite a opera√ß√£o a realizar: ");
 			  Scanner digitar = new Scanner(System.in);
 			  if(digitar.hasNext("1")) {
 				 new Gerenciar().contaNova(true); 
 			  }
 			  else if(digitar.hasNext("2")) {
 				 if(destino == null) {
-					 System.out.println("N„o h· conta.");
+					 System.out.println("N√£o h√° conta.");
 				     new Menu().principal(true, null);
 				 }else {
 					 new Gerenciar().retirar(true, destino); 	 
@@ -29,13 +29,13 @@ import java.util.Scanner;
 			  }
 			  else if(digitar.hasNext("3")) {
 				  if(destino == null) {
-						 System.out.println("N„o h· conta.");
+						 System.out.println("N√£o h√° conta.");
 					     new Menu().principal(true, null);
 					 }else {
 						 new Gerenciar().depositar(true, destino); 	 
 					 }
 			  }else {
-				 System.out.println("OpÁ„o inv·lida");
+				 System.out.println("Op√ß√£o inv√°lida");
 				 new Menu().principal(true, destino);
 			  }
 				 
@@ -76,13 +76,13 @@ import java.util.Scanner;
 		public void saca(double quantidade) {
 			if(quantidade < this.saldo) {
 				this.saldo -= quantidade;
-				System.out.println("Saque feito com sucesso! Seu saldo È " + this.saldo);
+				System.out.println("Saque feito com sucesso! Seu saldo √© " + this.saldo);
 			}else {
-				System.out.println("VocÍ atingiu o limite de saque");
+				System.out.println("Voc√™ atingiu o limite de saque");
 			}
 		}
 		public void deposita(double quantidade) {
 			this.saldo += quantidade;
-			System.out.println("DepÛsito feito com sucesso! Seu saldo È " + this.saldo);
+			System.out.println("Dep√≥sito feito com sucesso! Seu saldo √© " + this.saldo);
 		}	
 }	
