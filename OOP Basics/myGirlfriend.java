@@ -1,6 +1,5 @@
-package testes;
 import java.util.Scanner;
-public class teste2{
+public class myGirlfriend{
 	public static void main(String[] args) {
 		namorada L = new namorada();
 		System.out.println("Hello World!");
@@ -14,7 +13,6 @@ public class teste2{
 		Scanner altura = new Scanner(System.in);
 		L.altura = altura.nextFloat();
 		L.mudarSentimento();
-		L.sentimento = "Ódio";
 	}
 }
 
@@ -26,6 +24,6 @@ class namorada{
 	
 	public void mudarSentimento() {
 		this.sentimento = "Amor";
-		System.out.println("É impossível você mudar esse sentimento, você sente " + this.sentimento);
+		System.out.println("Ã‰ impossÃ­vel vocÃª mudar esse sentimento, vocÃª sente " + this.sentimento);
 	}
 }
