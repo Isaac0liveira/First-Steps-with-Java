@@ -1,6 +1,5 @@
-package testes;
 import java.util.Scanner;
-public class teste{
+public class schoolSystem{
 	public static void main(String []args) {
 		diretor diretor = new diretor();
 		aluno aluno01 = new aluno();
@@ -14,12 +13,12 @@ public class teste{
 		aluno01.setNota(7.6, 5.2, 8.0, 8.2);
 		aluno01.setFrequencia(195);
 		aluno01.setNome("Fernando");
-		aluno01.setTurma("3°A");
+		aluno01.setTurma("3Â°A");
 		
 		aluno02.setNota(7.0, 5.0, 7.6, 8.0);
 		aluno02.setFrequencia(192);
 		aluno02.setNome("Davi");
-		aluno02.setTurma("3°D");
+		aluno02.setTurma("3Â°D");
 		aluno02.setAprovacao(21);
 		
 		professor.setFrequencia(198);
@@ -36,19 +35,19 @@ public class teste{
 		if(senha.hasNext(diretor.getSenha())) {
 			
 			System.out.println("Bem vindo diretor " + diretor.getNome() + "!\n" + "\n---Alunos---");
-			System.out.print("Aluno: " + aluno01.getNome() + " | Turma: " + aluno01.getTurma() + "\nSituação: ");
+			System.out.print("Aluno: " + aluno01.getNome() + " | Turma: " + aluno01.getTurma() + "\nSituaÃ§Ã£o: ");
 			diretor.setAprovado(aluno01);
-			System.out.print("Aluno: " + aluno02.getNome() + " | Turma: " + aluno02.getTurma() + "\nSituação: ");
+			System.out.print("Aluno: " + aluno02.getNome() + " | Turma: " + aluno02.getTurma() + "\nSituaÃ§Ã£o: ");
 			diretor.setAprovado(aluno02);
 			diretor.setAbono(professor);
 			diretor.setRendimento(coordenador);
 			diretor.setAbono(coordenador);
 			
-			System.out.println("\n---Funcionários---");
+			System.out.println("\n---FuncionÃ¡rios---");
 			System.out.println("Professor: " + professor.getNome() + "| Turmas: " + professor.getTurma()
-			+ "| Salário: " + professor.getSalary());
+			+ "| SalÃ¡rio: " + professor.getSalary());
 			System.out.println("Coordenador: " + coordenador.getNome() + "| Turmas: " + coordenador.getTurma()
-			+ "| Salário: " + coordenador.getSalary());
+			+ "| SalÃ¡rio: " + coordenador.getSalary());
 			
 		}
 		
@@ -223,7 +222,7 @@ class diretor{
 			System.out.println("Aprovado");
 			this.aprovado = true;
 		}else if(aluno.getMedia() > 3 && aluno.getFrequencia() >= 200*0.70){
-			System.out.println("Recuperação");
+			System.out.println("RecuperaÃ§Ã£o");
 			this.aprovado = false;
 		}else {
 			System.out.println("Reprovado");
